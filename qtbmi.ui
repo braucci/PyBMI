@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>412</width>
+    <height>229</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calcolatore BMI - Biagio Raucci</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>BMI</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Altezza (cm)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QPushButton" name="pB_calcolo">
+       <property name="text">
+        <string>Calcolo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLineEdit" name="lE_bmi"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="lE_interpretazione"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLineEdit" name="lE_altezza"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Peso (Kg)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QSlider" name="hS_peso">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Interpretazione</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="lE_peso"/>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QSlider" name="hS_altezza">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>lE_peso</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>cambio_valore_lE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lE_altezza</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>cambio_valore_lE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>394</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hS_peso</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Form</receiver>
+   <slot>cambio_valore_hS()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>226</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pB_calcolo</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>calcolo_fun()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>196</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lE_peso</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>calcolo_fun()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lE_altezza</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>calcolo_fun()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>391</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lE_peso</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Form</receiver>
+   <slot>calcolo_fun()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>40</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lE_altezza</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Form</receiver>
+   <slot>calcolo_fun()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>72</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hS_altezza</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Form</receiver>
+   <slot>cambio_valore_hS()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>284</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>169</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>cambio_valore_lE()</slot>
+  <slot>cambio_valore_hS()</slot>
+  <slot>calcolo_fun()</slot>
+ </slots>
+</ui>
